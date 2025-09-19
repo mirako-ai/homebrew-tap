@@ -7,11 +7,11 @@ This is a Homebrew tap for Mirako-related formulae.
 To install formulae from this tap:
 
 ```bash
-brew tap mirako/mirako-homebrew-tap
+brew tap mirako-ai/homebrew-tap
 ```
 
 Then install formulae as usual:
 
 ```bash
-brew install <formula-name>
+brew install mirako
 ```
