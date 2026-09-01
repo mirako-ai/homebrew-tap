@@ -5,15 +5,15 @@
 class Mirako < Formula
   desc "Official CLI for Mirako AI platform - Create and manage AI avatars, interactive sessions, and AI media generation"
   homepage "https://mirako.ai"
-  version "1.3.1"
+  version "1.4.0"
   license "MIT"
 
   depends_on "git" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com//mirako-ai/mirako-cli/releases/download/v1.3.1/mirako-cli_Darwin_x86_64.tar.gz"
-      sha256 "05fb9fdb6a633dca89bf7ce67951ab0980889be63277147206d1e41e347a17a7"
+      url "https://github.com//mirako-ai/mirako-cli/releases/download/v1.4.0/mirako-cli_Darwin_x86_64.tar.gz"
+      sha256 "d98fd3391bc4e7b940d57ff53ae44197000028a4e3dc1b011c32fd49618ac57c"
 
       define_method(:install) do
         bin.install "mirako"
@@ -21,8 +21,8 @@ class Mirako < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com//mirako-ai/mirako-cli/releases/download/v1.3.1/mirako-cli_Darwin_arm64.tar.gz"
-      sha256 "cde19530fab68c4eda4b17fffd6ceab568fa619c8c82a789f6e7a918e5febcf7"
+      url "https://github.com//mirako-ai/mirako-cli/releases/download/v1.4.0/mirako-cli_Darwin_arm64.tar.gz"
+      sha256 "60cf9c2561b83de2991bad806b3332983a6d198e42ca3ed2e12cdccdc6e85fa7"
 
       define_method(:install) do
         bin.install "mirako"
@@ -33,16 +33,16 @@ class Mirako < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com//mirako-ai/mirako-cli/releases/download/v1.3.1/mirako-cli_Linux_x86_64.tar.gz"
-      sha256 "b0be0e4843a3b30c80e9df4cb818e7ee9eaf9e23b3f28ba476ea7cb935da809a"
+      url "https://github.com//mirako-ai/mirako-cli/releases/download/v1.4.0/mirako-cli_Linux_x86_64.tar.gz"
+      sha256 "e54692d7ee9f3f844e47482ddabdf798391b6810fe309da5a9d45420c5da6b07"
       define_method(:install) do
         bin.install "mirako"
         generate_completions_from_executable(bin/"mirako", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com//mirako-ai/mirako-cli/releases/download/v1.3.1/mirako-cli_Linux_arm64.tar.gz"
-      sha256 "ab31a8f00d0b096c38c2a0559ba6150ec2aac8693b729767a10c09554da84a5e"
+      url "https://github.com//mirako-ai/mirako-cli/releases/download/v1.4.0/mirako-cli_Linux_arm64.tar.gz"
+      sha256 "a6ea0dcc2b677a275108ed42abb566892ed1d4734c3618bcf9ee1c6866296d09"
       define_method(:install) do
         bin.install "mirako"
         generate_completions_from_executable(bin/"mirako", "completion")
